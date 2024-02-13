@@ -1,11 +1,9 @@
 .App {
   text-align: center;
+  font-family: 'Markazi Text', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -15,24 +13,149 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  background-color: white;
+}
+
+nav img {
+  width: 200px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+  font-weight:700 ;
+}
+
+header {
+  padding-top: 80px;
+  background-color: #495e57;
+}
+
+header section {
+  padding-top: 80px;
+  width:80%;
+  margin-left: 10%;
+  padding-bottom: 50px;
+  color: #EDEFEE;
+
+}
+
+.form  {
+  border : solid 2px black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.form div {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+.form div label {
+  margin-right: 12px;
+}
+
+h2 {
+  color: #F4CE14;
+  font-size: 40pt;
+}
+
+.submit-button {
+  background-color:#F4CE14;
+  color: #000000;
+  font-family: arial;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+p {
+  font-size: 13px;
+  width: 185px;
+}
+
+button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+header img {
+  height: 400px;
+  border-radius: 12pt;
+}
+
+footer section {
+
+  justify-items: center;
+  width:80%;
+  margin-left: 10%;
   }
-  to {
-    transform: rotate(360deg);
+
+
+footer section div{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+footer section div ul li {
+  list-style: none;
+}
+
+footer img {
+  width: 200px;
+}
+
+
+
+@media (max-width: 960px) {
+  header section, footer section {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .form  {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 961px) {
+  footer section {
+    flex-direction: column;
+    display:flex;
+  }
+  header section {
+    grid-template-columns: 1fr 1fr;
+    display:flex;
+    justify-items: center;
   }
 }
